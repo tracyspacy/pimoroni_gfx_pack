@@ -1,6 +1,6 @@
 [package]
 authors = ["tracyspacy"]
-categories = ["embedded", "hardware-support", "no-std", "rp2040"]
+categories = ["embedded", "hardware-support", "no-std"]
 name = "pimoroni_gfx_pack"
 description = "Driver for LCD GFX PACK by Pimoroni"
 version = "0.1.0"
