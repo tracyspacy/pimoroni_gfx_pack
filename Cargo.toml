@@ -19,7 +19,7 @@ embedded-hal-bus = "0.1.0"
 st7567_rs = "0.1.2"
 pimoroni_gfx_pack_button = "0.1.0"
 rgbled = "0.1.0"
-rp2040-hal = { version = "0.10.0" }
+rp2040-hal = { version = "0.10.2" }
 
 [features]
 default = ["boot2", "rt", "critical-section-impl"]
