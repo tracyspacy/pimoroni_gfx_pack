@@ -1,0 +1,33 @@
+[package]
+authors = ["tracyspacy"]
+categories = ["embedded", "hardware-support", "no-std", "rp2040"]
+name = "pimoroni_gfx_pack"
+description = "Driver for LCD GFX PACK by Pimoroni"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/tracyspacy/pimoroni_gfx_pack"
+resolver = "2"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cortex-m-rt = { version = "0.7", optional = true }
+rp2040-boot2 = { version = "0.3.0", optional = true }
+critical-section = { version = "1.2.0" }
+embedded-hal = { version = "1.0" }
+embedded-hal-bus = "0.1.0"
+st7567_rs = "0.1.2"
+pimoroni_gfx_pack_button = "0.1.0"
+rgbled = "0.1.0"
+rp2040-hal = { version = "0.10.0" }
+
+[features]
+default = ["boot2", "rt", "critical-section-impl"]
+critical-section-impl = ["rp2040-hal/critical-section-impl"]
+boot2 = ["rp2040-boot2"]
+#runtime
+rt = ["cortex-m-rt", "rp2040-hal/rt"]
+
+
+[profile.release]
+debug = 2
